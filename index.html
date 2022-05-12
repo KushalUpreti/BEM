@@ -9,9 +9,17 @@
   </head>
   <body>
     <header class="header">
-      <div class="logo">
-        <img src="https://bit.ly/3N3pTe4" alt="logo" class="logo__image" />
-        <p class="logo__text">Company Logo</p>
+      <div class="logo-wrapper">
+        <div class="hamburger-menu">
+          <div class="hamburger-menu__line"></div>
+          <div class="hamburger-menu__line"></div>
+          <div class="hamburger-menu__line"></div>
+        </div>
+
+        <div class="logo">
+          <img src="https://bit.ly/3N3pTe4" alt="logo" class="logo__image" />
+          <p class="logo__text">Company Logo</p>
+        </div>
       </div>
 
       <form class="search-form">
@@ -19,9 +27,19 @@
         <button class="search-form__button">Search</button>
       </form>
 
-      <form class="auth-form">
-        <input type="submit" value="Logout" class="auth-form__logout" />
-      </form>
+      <div class="search-wrapper">
+        <div class="search">
+          <img
+            src="/public/svg/search.svg"
+            alt="search svg"
+            class="search__icon"
+          />
+        </div>
+
+        <form class="auth-form">
+          <input type="submit" value="Logout" class="auth-form__logout" />
+        </form>
+      </div>
     </header>
 
     <aside class="aside">

@@ -6,20 +6,53 @@ body {
 
 .header {
   display: flex;
-  padding: 8px 16px;
+  padding: 0.5rem 3rem;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-menu__line {
+  width: 2rem;
+  border-radius: 5px;
+  height: 3px;
+  background-color: black;
 }
 
 .logo {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 
 .logo__image {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+.search {
+  display: none;
+  cursor: pointer;
+}
+
+.search:hover {
+  background-color: rgba(128, 128, 128, 0.308);
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.search__icon {
+  width: 20px;
+  height: 20px;
+  padding: 8px;
 }
 
 .search-form {
@@ -66,10 +99,6 @@ body {
   background-color: aqua;
 }
 
-.navigation__item {
-  /* padding: 8px 24px; */
-}
-
 .navigation__link {
   padding: 8px 24px;
   text-decoration: none;
@@ -79,25 +108,19 @@ body {
 
 .content {
   margin-left: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 3rem 5rem;
   height: 80vh;
 }
 
 .article {
-  width: 600px;
-  /* align-items: flex-start; */
+  max-width: 620px;
+  margin: auto;
 }
 
 .article__image {
   width: 200px;
   object-fit: contain;
   margin-right: 16px;
-}
-
-.article__image_float-left {
-  float: left;
 }
 
 .article__heading {
@@ -107,4 +130,74 @@ body {
 .article__paragraph {
   margin: 8px 0;
   text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .logo__image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .search {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-form {
+    display: none;
+  }
+
+  .article__image {
+    float: left;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+  }
+
+  .content {
+    padding: 2rem 0;
+    margin: 0;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .content {
+    padding: 2rem 1rem;
+  }
+
+  .article__image {
+    width: 130px;
+  }
+
+  .logo-wrapper {
+    gap: 0.9rem;
+  }
+
+  .search-wrapper {
+    gap: 0.5rem;
+  }
 }
